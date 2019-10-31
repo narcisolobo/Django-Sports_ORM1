@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<a href="{% url 'orm2' %}">GO TO ORM II</a>
+		<h1>Baseball Leagues</h1>
+		<ol>
+			{% for league in baseball_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Womens' Leagues</h1>
+		<ol>
+			{% for league in womens_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Hockey Leagues</h1>
+		<ol>
+			{% for league in hockey_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Non-Football Leagues</h1>
+		<ol>
+			{% for league in non_football_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Conferences</h1>
+		<ol>
+			{% for league in conferences %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Atlantic Leagues</h1>
+		<ol>
+			{% for league in atlantic_leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Dallas Teams</h1>
+		<ol>
+			{% for team in dallas_teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Raptor Teams</h1>
+		<ol>
+			{% for team in raptor_teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>City Teams</h1>
+		<ol>
+			{% for team in city_teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>'T' Teams</h1>
+		<ol>
+			{% for team in t_teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Alphabetical Teams</h1>
+		<ol>
+			{% for team in alpha_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Reverse Alphabetical Teams</h1>
+		<ol>
+			{% for team in alpha_reverse_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Coopers</h1>
+		<ol>
+			{% for cooper in coopers %}
+				<li>{{cooper.first_name}} {{cooper.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Joshuas</h1>
+		<ol>
+			{% for josh in joshuas %}
+				<li>{{josh.first_name}} {{josh.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Non-Joshua Coopers</h1>
+		<ol>
+			{% for cooper in non_josh_coopers %}
+				<li>{{cooper.first_name}} {{cooper.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Alexanders and Wyatts</h1>
+		<ol>
+			{% for player in alex_wyatts %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+	</body>
+</html>

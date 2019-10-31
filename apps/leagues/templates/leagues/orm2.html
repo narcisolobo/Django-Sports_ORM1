@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ORM II</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <p class="m-3">ORM II - <a href="{% url 'index' %}">GO BACK TO INDEX</a></p>
+    <div class="card-columns">
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>ATLANTIC SOCCER CONFERENCE</strong></li>
+          {% for team in asc_teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>BOSTON PENGUINS ROSTER</strong></li>
+          {% for player in penguins_roster %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>ICBC PLAYERS</strong></li>
+          {% for player in icbc_curr_players %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>LOPEZ PLAYERS (ACAF)</strong></li>
+          {% for player in lopez_players %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>ALL FOOTBALL PLAYERS</strong></li>
+          {% for player in football_players %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>TEAMS WITH SOPHIAS</strong></li>
+          {% for team in sophia_teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>LEAGUES WITH SOPHIAS</strong></li>
+          {% for league in sophia_leagues %}
+          <li class="list-group-item">{{league.name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>FLORES PLAYERS NOT ON ROUGHRIDERS</strong></li>
+          {% for player in non_rough_flores %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>SAM EVANS CURRENT AND FORMER TEAMS</strong></li>
+          {% for team in sam_evans_teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>ALL CURRENT/FORMER TIGER-CATS</strong></li>
+          {% for player in man_tc_history %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>FORMER VIKINGS</strong></li>
+          {% for player in former_vikings %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>J GRAY FORMER TEAMS</strong></li>
+          {% for team in jgray_former_teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>AFABP JOSHUAS</strong></li>
+          {% for player in afabp_joshuas %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>DOZEN TEAMS</strong></li>
+          {% for team in dozen_teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>PLAYERS SORTED BY TEAM COUNT</strong></li>
+          {% for player in player_team_count %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}} ({{ player.all_teams__count }})</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>LEAGUES</strong></li>
+          {% for league in leagues %}
+          <li class="list-group-item">{{league.name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>TEAMS</strong></li>
+          {% for team in teams %}
+          <li class="list-group-item">{{team.location}} {{team.team_name}} ({{ team.id }})</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="card m-3">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-dark"><strong>PLAYERS</strong></li>
+          {% for player in players %}
+          <li class="list-group-item">{{player.first_name}} {{player.last_name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
